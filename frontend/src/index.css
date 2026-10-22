@@ -1,0 +1,143 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Tailwind CSS & DaisyUI */
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Font global */
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Banner Styles */
+.banner_slice_item {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6rem;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.banner_text {
+  flex: 1 1 100%;
+}
+
+.banner_image {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+}
+
+.banner_image img {
+  max-height: 500px;
+  width: auto;
+  object-fit: contain;
+  z-index: 2;
+}
+
+/* Slick arrows */
+.slick-prev,
+.slick-next {
+  z-index: 5 !important;
+}
+
+.slick-prev {
+  left: -65px !important;
+}
+
+.slick-next {
+  right: -65px !important;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-family: slick;
+  font-size: 39px !important;
+  line-height: 1;
+  opacity: 0.75 !important;
+  color: #c5ff31 !important; /* Màu neon mới */
+}
+
+.slick-prev:hover::before,
+.slick-next:hover::before {
+  opacity: 1 !important;
+  color: #a5e82f !important; /* Hover nhẹ hơn */
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Slick Dots */
+.slick-dots {
+  position: absolute;
+  bottom: 70px !important;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slick-dots li {
+  margin: 0 6px;
+}
+
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(197, 255, 49, 0.3); /* Màu neon nhạt */
+  transition: background 0.3s;
+}
+
+.slick-dots li.slick-active button {
+  background: #c5ff31; /* Neon chính */
+}
+
+/* Nút Shop Now */
+button.shop-now-btn {
+  background-color: #c5ff31;
+  color: #1d3b29;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+button.shop-now-btn:hover {
+  background-color: #a5e82f;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(197, 255, 49, 0.2);
+}
+
+/* Delivery Component */
+.delivery_component {
+  margin-top: -4rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* Optional: Text Color (global) */
+.text-primary {
+  color: #c5ff31;
+}
+
+.text-dark {
+  color: #1d3b29;
+}
+
+/* Background color helper */
+.bg-primary {
+  background-color: #c5ff31;
+}
+
+.bg-dark {
+  background-color: #1d3b29;
+}
